@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>How Much?</title>
+  </head>
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+          <span class="fs-4">How Much?</span>
+        </a>
+      </header>
+
+      <main>
+        <div class="row g-5">
+          <div class="col-md-6">
+
+            <h3>Selecione as características do plano</h3>
+            <hr class="col-3 col-md-12 mb-5">
+
+            <div class="row mb-3">
+              <label for="select-segmentacao" class="col-sm-4 col-form-label">Segmentação</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-segmentacao" aria-label="Selectione o tipo de segmentação">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-in_odonto" class="col-sm-4 col-form-label">Odonto</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-in_odonto" aria-label="Selectione se possui cobertura odontológica">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-in_obstetricia" class="col-sm-4 col-form-label">Obstetricia</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-in_obstetricia" aria-label="Selectione o tipo de obstetricia">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-abrangencia" class="col-sm-4 col-form-label">Abrangência</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-abrangencia" aria-label="Selectione o tipo de abrangência">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-fator" class="col-sm-4 col-form-label">Fator</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-fator" aria-label="Selectione o tipo de fator">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-acomodacao" class="col-sm-4 col-form-label">Acomodação</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-acomodacao" aria-label="Selectione o tipo de acomodação">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-internacao" class="col-sm-4 col-form-label">Internação</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-internacao" aria-label="Selectione o tipo de internação">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-cd_faixa_etaria" class="col-sm-4 col-form-label">Faixa Etária</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-cd_faixa_etaria" aria-label="Selectione a faixa etária">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-nm_regiao" class="col-sm-4 col-form-label">Região</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-nm_regiao" aria-label="Selectione a região">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="select-ano_mes" class="col-sm-4 col-form-label">Ano e Mês</label>
+              <div class="col-sm-8">
+                <select class="form-select" id="select-ano_mes" aria-label="Selectione o ano e mês">
+                  <!-- ... -->
+                </select>
+              </div>
+            </div>
+
+            <div class="mb-5">
+              <a class="btn btn-primary btn-lg px-4" id="how_much_button">How Much?</a>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-6 mx-auto">
+                      <h3 id="how_much_answer">-</h3>
+                      <h5>Mensalidade</h5>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <footer class="pt-5 my-5 text-muted border-top">
+        Mentoria · © 2021
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='js/app.js') }}"></script>
+    <script type="text/javascript">
+      
+      // Init
+      app.getOptions();
+
+      // Events
+      $('#how_much_button').on('click', () => {
+        app.howMuch();
+      })
+
+    </script>
+  </body>
+</html>

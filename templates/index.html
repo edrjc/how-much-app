@@ -12,10 +12,16 @@
   </head>
   <body>
     <div class="col-lg-8 mx-auto p-3 py-md-5">
-      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+      <header class="d-flex flex-column align-items-center pb-3 mb-5 border-bottom">
         <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-          <span class="fs-4">How Much?</span>
+          <span class="fs-4 col-md-12"><h3>Estimando Valores para Planos de Saúde</h3></span>
         </a>
+        <div class="d-flex align-items-center">
+          <p class="fs-5 col-md-12 mb-0">Programa de Mentoria entre alunos DSA</p>
+        </div>
+        <div class="d-flex align-items-center">
+          <p class="fs-5 col-md-12 mb-0">Projeto em Ciência de Dados</p>
+        </div>
       </header>
 
       <main>
@@ -28,7 +34,7 @@
             <div class="row mb-3">
               <label for="select-segmentacao" class="col-sm-4 col-form-label">Segmentação</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-segmentacao" aria-label="Selectione o tipo de segmentação">
+                <select class="form-select" id="select-segmentacao" aria-label="Selectione o tipo de segmentação" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o tipo de segmentação?">
                   <!-- ... -->
                 </select>
               </div>
@@ -36,7 +42,7 @@
             <div class="row mb-3">
               <label for="select-in_odonto" class="col-sm-4 col-form-label">Odonto</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-in_odonto" aria-label="Selectione se possui cobertura odontológica">
+                <select class="form-select" id="select-in_odonto" aria-label="Selectione se possui cobertura odontológica" data-bs-toggle="tooltip" data-bs-placement="top" title="Possui cobertura odontológica?">
                   <!-- ... -->
                 </select>
               </div>
@@ -44,7 +50,7 @@
             <div class="row mb-3">
               <label for="select-in_obstetricia" class="col-sm-4 col-form-label">Obstetricia</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-in_obstetricia" aria-label="Selectione o tipo de obstetricia">
+                <select class="form-select" id="select-in_obstetricia" aria-label="Selectione o tipo de obstetricia" data-bs-toggle="tooltip" data-bs-placement="top" title="Possui obstetricia?">
                   <!-- ... -->
                 </select>
               </div>
@@ -52,7 +58,7 @@
             <div class="row mb-3">
               <label for="select-abrangencia" class="col-sm-4 col-form-label">Abrangência</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-abrangencia" aria-label="Selectione o tipo de abrangência">
+                <select class="form-select" id="select-abrangencia" aria-label="Selectione o tipo de abrangência" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o tipo de abrangência?">
                   <!-- ... -->
                 </select>
               </div>
@@ -60,7 +66,7 @@
             <div class="row mb-3">
               <label for="select-fator" class="col-sm-4 col-form-label">Fator</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-fator" aria-label="Selectione o tipo de fator">
+                <select class="form-select" id="select-fator" aria-label="Selectione o tipo de fator" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o tipo de fator?">
                   <!-- ... -->
                 </select>
               </div>
@@ -68,7 +74,7 @@
             <div class="row mb-3">
               <label for="select-acomodacao" class="col-sm-4 col-form-label">Acomodação</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-acomodacao" aria-label="Selectione o tipo de acomodação">
+                <select class="form-select" id="select-acomodacao" aria-label="Selectione o tipo de acomodação" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o tipo de acomodação?">
                   <!-- ... -->
                 </select>
               </div>
@@ -76,7 +82,7 @@
             <div class="row mb-3">
               <label for="select-internacao" class="col-sm-4 col-form-label">Internação</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-internacao" aria-label="Selectione o tipo de internação">
+                <select class="form-select" id="select-internacao" aria-label="Selectione o tipo de internação" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o tipo de internação?">
                   <!-- ... -->
                 </select>
               </div>
@@ -84,7 +90,7 @@
             <div class="row mb-3">
               <label for="select-cd_faixa_etaria" class="col-sm-4 col-form-label">Faixa Etária</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-cd_faixa_etaria" aria-label="Selectione a faixa etária">
+                <select class="form-select" id="select-cd_faixa_etaria" aria-label="Selectione a faixa etária" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual a faixa etária?">
                   <!-- ... -->
                 </select>
               </div>
@@ -92,23 +98,30 @@
             <div class="row mb-3">
               <label for="select-nm_regiao" class="col-sm-4 col-form-label">Região</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-nm_regiao" aria-label="Selectione a região">
+                <select class="form-select" id="select-nm_regiao" aria-label="Selectione a região" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual a região?">
                   <!-- ... -->
                 </select>
               </div>
             </div>
             <div class="row mb-3">
-              <label for="select-ano_mes" class="col-sm-4 col-form-label">Ano e Mês</label>
+              <label for="select-ano_mes" class="col-sm-4 col-form-label">Ano e Mês da Contratação</label>
               <div class="col-sm-8">
-                <select class="form-select" id="select-ano_mes" aria-label="Selectione o ano e mês">
+                <select class="form-select" id="select-ano_mes" aria-label="Selectione o ano e mês" data-bs-toggle="tooltip" data-bs-placement="top" title="Qual o ano e mês?">
                   <!-- ... -->
                 </select>
               </div>
             </div>
 
-            <div class="mb-5">
-              <a class="btn btn-primary btn-lg px-4" id="how_much_button">How Much?</a>
+            <div class="row mb-3">
+              <div class="col-sm-4"></div>
+              <div class="d-flex flex-column align-items-center col-sm-8">
+                <a class="btn btn-primary btn-lg px-4" id="how_much_button" data-bs-toggle="tooltip" data-bs-placement="top" title="Obter estimativa!">How Much?</a>  
+              </div>
             </div>
+
+            <!-- <div class="mb-5">
+              <a class="btn btn-primary btn-lg px-4" id="how_much_button">How Much?</a>
+            </div> -->
           </div>
 
           <div class="col-md-6">
@@ -124,8 +137,20 @@
 
         </div>
       </main>
-      <footer class="pt-5 my-5 text-muted border-top">
-        Mentoria · © 2021
+      <footer class="pt-3 my-3 text-muted border-top">
+        <div class="d-flex align-items-center">
+          <div class="d-flex flex-column align-items-center col-md-6">
+            <p class="fs-5 mb-0">Mentor</p>
+            <p class="fs-5">Marcelo Wecchi</p>
+          </div>
+          <div class="d-flex flex-column align-items-center col-md-6">
+            <p class="fs-5 mb-0">Mentorados</p>
+            <p class="fs-5 mb-0">Rye Santana Takeda</p>
+            <p class="fs-5 mb-0">Guilherme Coelho Neves e Eder José de Carvalho</p>
+            <p class="fs-5">Eder José de Carvalho</p>
+          </div>
+        </div>
+        <!-- Mentoria · © 2021 -->
       </footer>
     </div>
 
@@ -140,6 +165,12 @@
       // Events
       $('#how_much_button').on('click', () => {
         app.howMuch();
+      })
+
+      Array.from($('select, #how_much_button')).forEach((el) => {
+        let tooltip = new bootstrap.Tooltip(el, {
+          boundary: document.body
+        })
       })
 
     </script>

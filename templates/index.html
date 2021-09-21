@@ -134,6 +134,25 @@
           </div>
 
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Observação</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Os valores estimados são apenas para planos de saúde <b>individuais</b>.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entendi</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </main>
       <footer class="pt-3 my-3 text-muted border-top">
         <div class="d-flex align-items-center">
@@ -158,6 +177,8 @@
     <script type="text/javascript">
       
       // Init
+      new bootstrap.Modal($('#staticBackdrop')).show();
+
       app.getOptions();
 
       // Events

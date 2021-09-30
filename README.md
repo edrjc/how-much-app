@@ -5,7 +5,7 @@ Mentorados: Rye Santana Takeda, Guilherme Coelho Neves, Eder José de Carvalho
 
 ## Links úteis para entender o projeto
 - <a href="https://www.youtube.com/watch?v=RAeLRPZaTFk">Sobre o programa de mentoria</a>
-- <a href="https://www.youtube.com/watch?v=xYtL5-PCBx0">Sobre o projeto em Ciência de Dados</a>
+- <a href="https://www.youtube.com/watch?v=_u4wxHR1qVA">Sobre o projeto em Ciência de Dados</a>
 - <a href="https://mentoriaapp.herokuapp.com/">Link para a aplicação hospedada no Heroku</a>
 - <a href="https://github.com/wecchi/mentoria_dsa_2021/">Arquivos dos trabalhos realizados</a>
 
